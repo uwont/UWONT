@@ -7,12 +7,14 @@ body, html {
 
 .search-box{
   position: absolute;
-  top: 70%;
+  top: 72%;
   background: #2f3640;
   height: 40px;
   border-radius: 40px;
   padding: 10px;
+  text-decoration: none;
 }
+
 
 .search-box:hover > .search-txt{
   width: 240px;
@@ -75,6 +77,17 @@ h2 {
   top: 13%;
 }
 
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: .2px;
+  left: 10px;
+  color: #F7B267;
+  position: left;
+  top: 13%;
+  width: 50%;
+  position: absolute; transform: translate(400px, 100px);
+}
+
 .activities {
   position: fixed;
   top: 25%;
@@ -95,6 +108,29 @@ button {
   font-family: 'Quicksand', sans-serif;
 
 }
+
+
+booking-button {
+  width: 100px;
+  height: 50px;
+  font-size: 40px;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 3px;
+  background-color: #EEF0F2;
+  border: none;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  position: absolute; transform: translate(125px, -200 px);
+
+}
+
+img{
+  max-height: 45%;
+  max-width: 37%;
+  transform: translate(50px, 180px);
+}
+
 
 .activities button:hover {
   background-color: #F7B267;
