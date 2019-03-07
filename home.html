@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:200" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,900" rel="stylesheet">
 <body>
 
 </body>
@@ -17,33 +18,66 @@
   <a href="home.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
-  <h2>pick an activitiy that interests you...</h2>
+  <h2>pick up to 3 activities that interest you...</h2>
 </div>
 
 <div class = "activities">
-  <a href="./art.html">
-  <button> Art </button>
-  </a>
-  <button> Sports </button>
-  <button> Music </button>
-  <button> Nature </button>
-  <button> Cooking </button>
-  <button> Eating </button>
-  <button> Dancing </button>
-  <button> Bars/Clubs </button>
-  <button> Working Out </button>
-  <button> Academics </button>
-  <button> Volunteering </button>
-  <button> Adventure </button>
-  <button> Traveling </button>
-  <button> Animals </button>
-  <button> Museums </button>
+  <button id = "act0" onClick = 'changeColor("act0")'> Art </button>
+  <button id = "act1" onClick = 'changeColor("act1")'> Sports </button>
+  <button id = "act2" onClick = 'changeColor("act2")'> Music </button>
+  <button id = "act3" onClick = 'changeColor("act3")'> Nature </button>
+  <button id = "act4" onClick = 'changeColor("act4")'> Cooking </button>
+  <button id = "act5" onClick = 'changeColor("act5")'> Eating </button>
+  <button id = "act6" onClick = 'changeColor("act6")'> Dancing </button>
+  <button id = "act7" onClick = 'changeColor("act7")'> Bars/Clubs </button>
+  <button id = "act8" onClick = 'changeColor("act8")'> Working Out </button>
+  <button id = "act9" onClick = 'changeColor("act9")'> Academics </button>
+  <button id = "act10" onClick = 'changeColor("act10")'> Volunteering </button>
+  <button id = "act11" onClick = 'changeColor("act11")'> Adventure </button>
+  <button id = "act12" onClick = 'changeColor("act12")'> Traveling </button>
+  <button id = "act13" onClick = 'changeColor("act13")'> Animals </button>
+  <button id = "act14" onClick = 'changeColor("act14")'> Museums </button>
 </div>
 <div class = "navigate">
-  <div class="back"><button id = "back"> Back </button></div>
   <div class="next">
-    <button id = "skip"> Skip </button>
-    <button id = "next"> Next </button>
+    <a href = "skip.html"><button id = "skip"> Skip </button></a>
+    <a href = "art.html"><button id = "next"> Next </button></a>
   </div>
 </div>
 </html>
+
+<script>
+document.getElementById("act0").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act1").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act2").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act3").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act4").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act5").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act6").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act7").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act8").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act9").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act10").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act11").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act12").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act13").style.backgroundColor = "rgb(255, 255, 255)";
+document.getElementById("act14").style.backgroundColor = "rgb(255, 255, 255)";
+count = 0;
+function changeColor(id) {
+  e = document.getElementById(id);
+  if (e.style.backgroundColor != "rgb(255, 255, 255)") {
+    e.style.backgroundColor = "rgb(255, 255, 255)";
+    count = count - 1;
+  }
+  else if (count<3) {
+    e.style.backgroundColor = "#F7B267";
+    count = count + 1;
+  }
+  else{
+    document.getElementById("next").style.color = "#F7B267";
+    document.getElementById("next").style.fontSize = "larger";
+    document.getElementById("next").style.fontWeight = "500";
+
+  }
+}
+</script>
