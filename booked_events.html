@@ -18,32 +18,42 @@
   <a href="home.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
-  <h2>If you don't want a recommendation, <br>here are popular events happening nearby!</h2>
+  <h2>Booked Events:</h2>
 </div>
 
-<table class='tile_table'>
-  <tr>
-    <td>
-      <img class="tile_image" src="images/food.jpeg"/>
-      <p>Sensational cooking class, 2 Mar 2019.</p>
-    </td>
-    <td>
-      <img class="tile_image" src="images/wine.jpg"/>
-      <p>Sensational wine tasting class, 2 Mar 2019.</p>
-    </td>
-  </tr>
-</table>
+<div class="booked_event"> Pottery Class </div>
+
+<div class="confirm"><a href="empty_events.html"><button onClick = "storeData()" id = "confirm">Cancel Event</button></a></div>
+
+<p id="demo"></p>
+
 
 <div class = "navigate">
   <div class="back">
-    <a href = "home.html"><button id = "back"> Back </button></a>
+    <a href = "booking.html"><button id = "back"> Back </button></a>
+  </div>
+  <div class="next">
+    <a href="home.html"><button id = "skip">Skip</button></a>
+    <a href="home.html"><button id = "next"> Next </button></a>
   </div>
 </div>
-
-
-
-
-
-
-
 </html>
+<script>
+  function storeData() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var first = x.elements[0].value;
+  var last = x.elements[1].value;
+  var ccard = x.elements[2].value;
+  var tix = x.elements[3].value;
+  document.getElementById("name1").innerHTML = first;
+  document.getElementById("name2").value = last;
+  document.getElementById("my_card").value = ccard;
+  document.getElementById("my_tix").value = first;
+  document.getElementById("demo").innerHTML = first;
+
+}
+</script>
+
+
+

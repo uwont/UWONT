@@ -9,38 +9,67 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Quicksand|Raleway:200" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,900" rel="stylesheet">
 <body>
 
 </body>
-<div class="title">
-  <a href="home.html"><h1> UWONT </h1></a>
+<div class = "header">
+  <div class="title">
+    <a href="home.html"><h1> UWONT </h1></a>
+  </div>
+  <a href="profile.html"><i class="far fa-user"></i></a>
 </div>
 <div class="subtitle">
   <h2>Great! What kind of art interests you?</h2>
 </div>
+
 <div class = "activities">
-  <button> Glass Blowing </button>
-  <button> Paper Machet </button>
-  <button> Painting </button>
-  <button> Calligraphy </button>
-  <button> Ceramics </button>
-  <button> Finger Painting </button>
-  <a href="./booking.html">
-  <button> Pottery </button>
-</a>
-  <button> Jewelry Crafting </button>
-  <button> Cardboard Art </button>
-  <button> Interpretive </button>
+  <button id = "act1" onClick = 'changeColor("act1")'> Glass Blowing </button>
+  <button id = "act2" onClick = 'changeColor("act2")'> Paper Machet </button>
+  <button id = "act3" onClick = 'changeColor("act3")'> Painting </button>
+  <button id = "act4" onClick = 'changeColor("act4")'> Calligraphy </button>
+  <button id = "act5" onClick = 'changeColor("act5")'> Ceramics </button>
+  <button id = "act6" onClick = 'changeColor("act6")'> Finger Painting </button>
+  <button id = "act7" onClick = 'changeColor("act7")'> Pottery </button>
+  <button id = "act8" onClick = 'changeColor("act8")'> Jewelry Crafting </button>
+  <button id = "act9" onClick = 'changeColor("act9")'> Cardboard Art </button>
+  <button id = "act10" onClick = 'changeColor("act10")'> Interpretive </button>
 </div>
+
 <div class = "navigate">
-  <div class="back"><button id = "back"> Back </button></div>
+  <div class="back">
+    <a href = "home.html"><button id = "back"> Back </button></a>
+  </div>
   <div class="next">
-    <button id = "skip">
-      <a href="skip.html">
-        Skip
-      </a>
-    </button>
-    <button id = "next"> Next </button>
+    <a href="skip.html"><button id = "skip">Skip</button></a>
+    <a href="booking.html"><button id = "next"> Next </button></a>
   </div>
 </div>
 </html>
+
+<script>
+document.getElementById("act0").style.color = "rgb(0, 0, 0)";
+document.getElementById("act1").style.color = "rgb(0, 0, 0)";
+document.getElementById("act2").style.color = "rgb(0, 0, 0)";
+document.getElementById("act3").style.color = "rgb(0, 0, 0)";
+document.getElementById("act4").style.color = "rgb(0, 0, 0)";
+document.getElementById("act5").style.color = "rgb(0, 0, 0)";
+document.getElementById("act6").style.color = "rgb(0, 0, 0)";
+document.getElementById("act7").style.color = "rgb(0, 0, 0)";
+document.getElementById("act8").style.color = "rgb(0, 0, 0)";
+document.getElementById("act9").style.color = "rgb(0, 0, 0)";
+document.getElementById("act10").style.color = "rgb(0, 0, 0)";
+document.getElementById("act11").style.color = "rgb(0, 0, 0)";
+document.getElementById("act12").style.color = "rgb(0, 0, 0)";
+document.getElementById("act13").style.color = "rgb(0, 0, 0)";
+document.getElementById("act14").style.color = "rgb(0, 0, 0)";
+function changeColor(id) {
+  e = document.getElementById(id);
+  if (e.style.color != "rgb(244, 96, 54)") {
+    e.style.color = "rgb(244, 96, 54)";
+  } else {
+    e.style.color = "rgb(0, 0, 0)";
+  }
+}
+</script>

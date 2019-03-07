@@ -18,29 +18,22 @@
   <a href="home.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
-  <h2>Book the class!</h2>
+  <h2>Fill in your profile!</h2>
 </div>
 
 <div class="booking">
-  <div class="bookingtile">
-    First Name:
-  <input type="name">
-  </div>
-  <div class="bookingtile">
-  Last name:
-  <input type="name">
-  </div>
-  <div class="bookingtile">
-  Credit Card Number:
-  <input type="name">
-  </div>
-  <div class="bookingtile">
-  Number of people:
-  <input type="name">
-</div>
+<form id="frm1" action="/action_page.php">
+  First name: <input class="bookingtile" type="text" name="fname" value=""><br>
+  Last name: <input class="bookingtile" type="text" name="lname" value=""><br><br>
+  Credit Card: <input class="bookingtile1" type="text" name="ccard" value=""><br><br><br>
+</form>
 </div>
 
-<div class="confirm"><a href="booked_events.html"><button id = "confirm">Confirm Booking!</button></a></div>
+<div class="confirm">
+  <a href="booked_events.html"><button onClick = "storeData()" id = "confirm">Check Bookings!</button></a>
+</div>
+
+<p id="demo"></p>
 
 
 <div class = "navigate">
@@ -52,6 +45,23 @@
     <a href="home.html"><button id = "next"> Next </button></a>
   </div>
 </div>
-
-
 </html>
+<script>
+  function storeData() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var first = x.elements[0].value;
+  var last = x.elements[1].value;
+  var ccard = x.elements[2].value;
+  var tix = x.elements[3].value;
+  document.getElementById("name1").innerHTML = first;
+  document.getElementById("name2").value = last;
+  document.getElementById("my_card").value = ccard;
+  document.getElementById("my_tix").value = first;
+  document.getElementById("demo").innerHTML = first;
+
+}
+</script>
+
+
+
