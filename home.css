@@ -283,27 +283,57 @@ a.book:hover {
 }
 
 .tile_table p {
+  border: 1px solid black;
   position: fixed;
   top: 35%;
+  width: 100%;
+  column-width: 100px;
   text-align: center;
   color: #F7B267;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: .2px;
+  padding: 30px;
 }
+
 
 .tile_table tr{
   width: 100%;
   text-align: center;
+  padding: 20px;
 }
 
-.tile_image{
-  padding: 3px 5px 0px 3px;
-  margin: 5px 5px 0px 5px;
+.tile_image {
+    padding: 15px 5px 0px 3px;
+    width: 85%;
+    height: 200px;
+    margin: 5px 5px 0px 5px;
+}
+
+.tile_image.img{
+  padding: 100px;
 }
 
 .tile_p p{
   line-height: 0px;
   text-align: center;
+}
+
+.event{
+
+  width: 32%;
+  font-family: 'Quicksand', sans-serif;
+  color: #F7B267;
+  display: inline-block;
+  text-align: center;
+
+}
+
+button.book{
+  border: 2px solid black;
+  font-family: 'Quicksand', sans-serif;
+  color: #F7B267;
+  margin: 15px;
+
 }
 
 
