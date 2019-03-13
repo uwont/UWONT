@@ -19,10 +19,6 @@
   <h2>select dates you have available...</h2>
 </div>
 
-<div class="locate">
-  <h2>allow us to access your location...</h2>
-  <button> Yes </button>
-</div>
 
 <div class="calendar">
 <section class="mounth" id="january">
@@ -96,16 +92,19 @@
 
 <div class = "navigate">
   <div class="next">
-    <a href = "skip.html"><button id = "skip"> Skip </button></a>
-    <a href = "art.html"><button id = "next"> Next </button></a>
+    <a href = "home.html"><button id = "skip"> Skip </button></a>
+    <a href = "home.html"><button id = "next"> Next </button></a>
   </div>
 </div>
 
-</html>
+<div class="locate">
+  <h2>allow us to access your location...</h2>
+  <div class="next">
+  <button id="next"> Yes </button>
+</div>
+</div>
+
 </body>
-
-
-<!-- Git Repo: https://github.com/Russian60/flex-calendar -->
 
 </html>
 
@@ -150,10 +149,6 @@ function changeColor(id) {
   }
 
 }
-$(".dates").click(function(){
-  $(this).parent()
-  .toggleClass('active');
-});
 </script>
 
 
