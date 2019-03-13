@@ -14,15 +14,16 @@
 <body>
 
 </body>
-<div class = "header">
-  <div class="title">
-    <a href="home.html"><h1> UWONT </h1></a>
-  </div>
-  <a href="profile.html"><i class="far fa-user"></i></a>
+
+<a href="profile.html"><i class="far fa-user"></i></a>
+<div class="title">
+  <a href="home.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
   <h2>pick up to 3 activities that interest you...</h2>
 </div>
+
+
 
 
 <div class = "activities">
@@ -41,6 +42,9 @@
   <button id = "act12" onClick = 'changeColor("act12")'> Traveling </button>
   <button id = "act13" onClick = 'changeColor("act13")'> Animals </button>
   <button id = "act14" onClick = 'changeColor("act14")'> Museums </button>
+  <button id = "act15" onClick = 'changeColor("act15")'> Beauty </button>
+  <button id = "act16" onClick = 'changeColor("act16")'> Spiritual </button>
+  <button id = "act17" onClick = 'changeColor("act17")'> Seasonal </button>
 </div>
 <div class = "navigate">
   <div class="next">
@@ -66,22 +70,29 @@ document.getElementById("act11").style.color = "rgb(0, 0, 0)";
 document.getElementById("act12").style.color = "rgb(0, 0, 0)";
 document.getElementById("act13").style.color = "rgb(0, 0, 0)";
 document.getElementById("act14").style.color = "rgb(0, 0, 0)";
-count = 0;
+document.getElementById("act15").style.color = "rgb(0, 0, 0)";
+document.getElementById("act16").style.color = "rgb(0, 0, 0)";
+document.getElementById("act17").style.color = "rgb(0, 0, 0)";
+var count = 0;
 function changeColor(id) {
   e = document.getElementById(id);
-  if (e.style.color != "rgb(244, 96, 54)") {
+  if (e.style.color != "rgb(244, 96, 54)" && count < 3)  {
     e.style.color = "rgb(244, 96, 54)";
-    count = count - 1;
-  }
-  else if (count<3) {
-    e.style.color = "#000000";
     count = count + 1;
   }
+  else if (count < 3) {
+    e.style.color = "rgb(0, 0, 0)";
+    count = count - 1;
+  }
   else{
-    document.getElementById("next").style.color = "#000000";
+    document.getElementById("next").style.color = "rgb(0, 0, 0)";
     document.getElementById("next").style.fontSize = "larger";
     document.getElementById("next").style.fontWeight = "500";
-
+    if (e.style.color == "rgb(244, 96, 54)")  {
+      e.style.color = "rgb(0, 0, 0)";
+      count = count - 1;
+    }
   }
+
 }
 </script>

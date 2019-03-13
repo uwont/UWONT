@@ -17,16 +17,34 @@
 <div class="title">
   <a href="home.html"><h1> UWONT </h1></a>
 </div>
-<div class="subtitle">
-  <h2>Fill in your profile!</h2>
-</div>
 
 <div class="booking">
-<form id="frm1" action="/action_page.php">
-  First name: <input class="bookingtile" type="text" name="fname" value=""><br>
-  Last name: <input class="bookingtile" type="text" name="lname" value=""><br><br>
-  Credit Card: <input class="bookingtile1" type="text" name="ccard" value=""><br><br><br>
-</form>
+  <h2> Log In </h2>
+  <form id="frm1" action="/action_page.php">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Username" id="username" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Password" id="password" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+  </form>
+  <div class="sign_in">
+    <a href="booked_events.html"><h3>Sign In</h3></a>
+  </div>
+  <h3>Create An Account</h3>
+  <h5>Forgot Password?</h5>
 </div>
 
 <div class="confirm">
@@ -61,7 +79,8 @@
   document.getElementById("demo").innerHTML = first;
 
 }
+
+$('#textarea1').val('New Text');
+M.textareaAutoResize($('#textarea1'));
+
 </script>
-
-
-

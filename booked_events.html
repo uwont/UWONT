@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 
 </body>
@@ -18,14 +19,43 @@
   <a href="home.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
-  <h2>Booked Events:</h2>
+  <h2>Hi, John Doe!</h2>
 </div>
 
-<div class="booked_event"> Pottery Class </div>
+<div class="settings">
+  <i class="material-icons">settings</i>
+</settings>
 
-<div class="confirm"><a href="empty_events.html"><button onClick = "storeData()" id = "confirm">Cancel Event</button></a></div>
+<div class="pic">
+  <i class="material-icons">account_circle</i>
+</div>
 
-<p id="demo"></p>
+<div class="tabletitle">
+  <h2>Upcoming Booked Events:</h2>
+</div>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Date of Event</th>
+    <th>Cancel?</th>
+  </tr>
+  <tr id="concert">
+    <td>Concert</td>
+    <td>03/29/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("concert")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+  <tr id = "pottery">
+    <td>Pottery Class</td>
+    <td>08/02/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("pottery")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+  <tr id = "skydiving">
+    <td>Skydiving</td>
+    <td>10/29/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("skydiving")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+</table>
 
 
 <div class = "navigate">
@@ -37,23 +67,21 @@
     <a href="home.html"><button id = "next"> Next </button></a>
   </div>
 </div>
+
 </html>
+
+
+
 <script>
-  function storeData() {
-  var x = document.getElementById("frm1");
-  var text = "";
-  var first = x.elements[0].value;
-  var last = x.elements[1].value;
-  var ccard = x.elements[2].value;
-  var tix = x.elements[3].value;
-  document.getElementById("name1").innerHTML = first;
-  document.getElementById("name2").value = last;
-  document.getElementById("my_card").value = ccard;
-  document.getElementById("my_tix").value = first;
-  document.getElementById("demo").innerHTML = first;
-
-}
+  function getConfirmation(id) {
+    var retVal = confirm("Are you sure you want to cancel your event?");
+    if( retVal == true ) {
+      alert("Event Cancelled!");
+      document.getElementById(id).remove();
+      return true;
+    } else {
+      alert("Event NOT Cancelled!");
+      return false;
+    }
+  }
 </script>
-
-
-
