@@ -302,12 +302,6 @@ a.book:hover {
   padding: 20px;
 }
 
-.tile_image {
-    padding: 15px 5px 0px 3px;
-    width: 85%;
-    height: 200px;
-    margin: 5px 5px 0px 5px;
-}
 
 .tile_image.img{
   padding: 100px;
@@ -326,6 +320,19 @@ a.book:hover {
   display: inline-block;
   text-align: center;
 
+}
+
+.single-event.event{
+  position: relative;
+  left: 100px;
+
+}
+
+.tile_image {
+    padding: 15px 5px 0px 3px;
+    width: 85%;
+    height: 200px;
+    margin: 5px 5px 0px 5px;
 }
 
 button.book{
