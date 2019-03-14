@@ -15,10 +15,21 @@
 
 </body>
 
-<a href="profile.html"><i class="far fa-user"></i></a>
-<div class="title">
-  <a href="home.html"><h1> UWONT </h1></a>
+<div class="prof">
+  <a href="profile.html"><i class="far fa-user"></i></a>
 </div>
+
+<div id="tfheader">
+  <form id="tfnewsearch" method="get" action="http://www.google.com">
+          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+  </form>
+<div class="tfclear"></div>
+</div>
+
+<div class="title">
+  <a href="calendar.html"><h1> UWONT </h1></a>
+</div>
+
 <div class="subtitle">
   <h2>pick up to 3 activities that interest you...</h2>
 </div>
@@ -47,8 +58,11 @@
   <button id = "act17" onClick = 'changeColor("act17")'> Seasonal </button>
 </div>
 <div class = "navigate">
+  <div class="back">
+    <a href = "calendar.html"><button> Back </button></a>
+  </div>
   <div class="next">
-    <a href = "skip.html"><button id = "skip"> Skip </button></a>
+    <a href = "skip.html"><button> Skip </button></a>
     <a href = "art.html"><button id = "next"> Next </button></a>
   </div>
 </div>

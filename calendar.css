@@ -8,10 +8,17 @@ body, html {
 }
 
 .locate{
-  position:relative;
-  left: 700px;
-  top: 100px;
+  position: fixed;
+  right: 20%;
+  margin-top: 40px;
+  text-align: center;
 }
+
+.locate h2{
+  text-align: center;
+  padding: 10px;
+}
+
 
 h1 {
   font-weight: 900;
@@ -71,9 +78,10 @@ h3 {
   right: 0;
 }
 
-.navigate button{
-  color: #CDCDCD;
+.navigate .next button{
+  color: black;
 }
+
 .navigate button:hover {
   color: #F46036;
   font-size: 24px;
@@ -131,7 +139,7 @@ section.mounth {
   overflow: hidden;
   display: block;
   float: left;
-  width: 420px; height: auto;
+  width: 400px; height: 400px;
   background: #fff;
   box-shadow: 0 1px 1px rgba(0,0,0,.25);
   border-radius: 5px;
@@ -139,25 +147,25 @@ section.mounth {
   header {
     position: relative;
     display: block;
-    height: 80px;
+    height: 70px;
     background: #e9eaf0;
     box-shadow: inset 0 -1px 0 rgba(0,0,0,.06);
   }
     header h1 {
-      margin-left: 30px;
+      margin-left: 0px;
       line-height: 80px;
     }
     header nav {
       overflow: hidden;
       position: absolute;
       display: block;
-      right: 30px; top: 30px;
+      right: 20px; top: 20px;
     }
       header nav span {
         display: block;
         float: left;
         width: 11px; height: 20px;
-        margin-left: 30px;
+        margin-left: 20px;
         cursor: pointer;
         background: url('http://ysfu.net/sprite.png') no-repeat;
       }
@@ -174,7 +182,7 @@ section.mounth {
             background-position: -119px -4px;
           }
 
-article {padding: 6px 0 25px 25px}
+article {padding: 4px 0 25px 25px}
   article b,
   article span {
     display: block;
@@ -267,42 +275,6 @@ body, html {
   font-size: 20px;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap{
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-160%, -800%);
-}
-
-/* label color */
-   .input-field label {
-     color: #000;
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #000;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #000;
-   }
 
 
 h1 {
@@ -655,7 +627,7 @@ h4{
   width: 185px;
   border: 1px solid black;
 }
-.booking input {
+.locate input {
   width: 300px;
   height: 20px;
   padding: 10px;
@@ -763,4 +735,55 @@ button.cancelbutton {
   margin: 0 auto;
 }
 
+#tfnewsearch{
+  float:right;
+  padding:20px;
+}
+.tftextinput{
+  margin: 0;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  border:1px solid #F46036; border-right:0px;
+  border-top-left-radius: 5px 5px;
+  border-bottom-left-radius: 5px 5px;
+}
+.tfbutton {
+  margin: 0;
+  padding: 5px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:14px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: solid 1px #F46036; border-right:0px;
+  background-color: #F46036;
+  border-top-right-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+}
+.tfbutton:hover {
+  text-decoration: none;
+  background: #007ead;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+  background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+}
+/* Fixes submit button height problem in Firefox */
+.tfbutton::-moz-focus-inner {
+  border: 0;
+}
+.tfclear{
+  clear:both;
+}
 
+.prof{
+float: left;
+padding-left: 15px;
+margin-top: 20px;
+}
+
+.calendar{
+  position: fixed;
+  left: 15%;
+}

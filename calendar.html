@@ -12,12 +12,24 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,900" rel="stylesheet">
 <body>
-<div class="title">
-  <a href="home.html"><h1> UWONT </h1></a>
-</div>
-<div class="subtitle">
-  <h2>select dates you have available...</h2>
-</div>
+  <div class="prof">
+    <a href="profile.html"><i class="far fa-user"></i></a>
+  </div>
+
+  <div id="tfheader">
+    <form id="tfnewsearch" method="get" action="http://www.google.com">
+            <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+    </form>
+  <div class="tfclear"></div>
+  </div>
+
+  <div class="title">
+    <a href="calendar.html"><h1> UWONT </h1></a>
+  </div>
+
+  <div class="subtitle">
+    <h2>Enter preferred dates and locations</h2>
+  </div>
 
 
 <div class="calendar">
@@ -98,10 +110,18 @@
 </div>
 
 <div class="locate">
-  <h2>allow us to access your location...</h2>
-  <div class="next">
-  <button id="next"> Yes </button>
-</div>
+  <h2> Enter Location </h2>
+  <form id="frm1" action="/action_page.php">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Location" id="username" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+  </form>
 </div>
 
 </body>
@@ -150,6 +170,3 @@ function changeColor(id) {
 
 }
 </script>
-
-
-
