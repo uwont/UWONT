@@ -29,15 +29,14 @@
   <a href="calendar.html"><h1> UWONT </h1></a>
 </div>
 
-
-<div class="booknow">
-  <h2>Fill in the information below to book your class!</h2>
+<div class="booking">
+  <h2> Log In </h2>
   <form id="frm1" action="/action_page.php">
     <div class="row">
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Full Name" id="username" type="text" class="validate">
+            <input placeholder="Username" id="username" type="text" class="validate">
           </div>
         </div>
       </form>
@@ -46,25 +45,24 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input placeholder="Credit Card Number" id="password" type="text" class="validate">
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <input placeholder="# of People" id="password" type="text" class="validate">
+            <input placeholder="Password" id="password" type="text" class="validate">
           </div>
         </div>
       </form>
     </div>
   </form>
   <div class="sign_in">
-    <a href="calendar.html" onclick="getConfirmation()"><h3>Book Class</h3></a>
+    <a href="booknow2.html"><h3>Sign In</h3></a>
   </div>
+  <a href="create_account.html"><h3>Create An Account</h3></a>
+  <h5>Forgot Password?</h5>
 </div>
+
+<div class="confirm">
+  <a href="booked_events.html"><button onClick = "storeData()" id = "confirm">Check Bookings!</button></a>
+</div>
+
+<p id="demo"></p>
 
 
 <div class = "navigate">
@@ -72,15 +70,28 @@
     <a href = "booking.html"><button id = "back"> Back </button></a>
   </div>
   <div class="next">
-    <a href="home.html"><button id = "skip">Skip</button></a>
-    <a href="home.html"><button id = "next"> Next </button></a>
+    <a href="booknow2.html"><button id = "skip">Skip</button></a>
+    <a href="booknow2.html"><button id = "next"> Next </button></a>
   </div>
 </div>
-
 </html>
-
 <script>
-function getConfirmation() {
-  alert("Event Booked!")
+  function storeData() {
+  var x = document.getElementById("frm1");
+  var text = "";
+  var first = x.elements[0].value;
+  var last = x.elements[1].value;
+  var ccard = x.elements[2].value;
+  var tix = x.elements[3].value;
+  document.getElementById("name1").innerHTML = first;
+  document.getElementById("name2").value = last;
+  document.getElementById("my_card").value = ccard;
+  document.getElementById("my_tix").value = first;
+  document.getElementById("demo").innerHTML = first;
+
 }
+
+$('#textarea1').val('New Text');
+M.textareaAutoResize($('#textarea1'));
+
 </script>

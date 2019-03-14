@@ -14,9 +14,19 @@
 <body>
 
 </body>
-<a href="profile.html"><i class="far fa-user"></i></a>
+<div class="prof">
+  <a href="profile.html"><i class="far fa-user"></i></a>
+</div>
+
+<div id="tfheader">
+  <form id="tfnewsearch" method="get" action="http://www.google.com">
+          <input type="text" class="tftextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="tfbutton">
+  </form>
+<div class="tfclear"></div>
+</div>
+
 <div class="title">
-  <a href="home.html"><h1> UWONT </h1></a>
+  <a href="calendar.html"><h1> UWONT </h1></a>
 </div>
 <div class="subtitle">
   <h2>If you don't want a recommendation, <br>here are popular events happening nearby!</h2>
@@ -25,19 +35,19 @@
 <div class = "event">
   <img class="tile_image" src="images/yu-gi-oh.jpg"/>
   <p>Yu-Gi-Oh Tournment, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
+  <a onclick="getConfirmation()"><button> Book </button></a>
 </div>
 
 <div class = "event">
   <img class="tile_image" src="images/p3.jpg"/>
   <p>Please Fight a Bear, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
+  <a onclick="getConfirmation()"><button> Book </button></a>
 </div>
 
 <div class = "event">
   <img class="tile_image" src="images/larp.jpg"/>
   <p>Exciting LARP Event, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
+  <a onclick="getConfirmation()"><button> Book </button></a>
 </div>
 
 
@@ -46,3 +56,16 @@
     <a href = "home.html"><button id = "back"> Back </button></a>
   </div>
 </div>
+
+<script>
+function getConfirmation() {
+  var retVal = confirm("Click CANCEL to book event WITHOUT signing in. Click OK to sign in before booking event.");
+  if( retVal == true ) {
+    location.replace("signin3.html");
+    return true;
+  } else {
+    location.replace("booking3.html");
+    return false;
+  }
+}
+</script>

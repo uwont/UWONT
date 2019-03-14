@@ -14,7 +14,6 @@
 <body>
 
 </body>
-
 <div class="prof">
   <a href="profile.html"><i class="far fa-user"></i></a>
 </div>
@@ -30,31 +29,54 @@
   <a href="calendar.html"><h1> UWONT </h1></a>
 </div>
 
-<div class="subtitle">
-  <h2>Based on your preferences, <br>here are some events we think you'd like happening nearby!</h2>
-</div>
 
-<div class = "event">
-  <img class="tile_image" src="images/art-tour.jpg"/>
-  <p>Take a trip to the Art Institute, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
-</div>
-
-<div class = "event">
-  <img class="tile_image" src="images/soccer.jpg"/>
-  <p>Sign up for a trail Club Soccer Practice, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
-</div>
-
-<div class = "event">
-  <img class="tile_image" src="images/concert.jpg"/>
-  <p>Attend a Kirbinator8 concert, 2 Mar 2019.</p>
-  <a href="booknow.html"><button class = "book"> Book </button></a>
+<div class="booknow">
+  <h2>Fill in the information below to book your class!</h2>
+  <form id="frm1" action="/action_page.php">
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Full Name" id="username" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Credit Card Number" id="password" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="# of People" id="password" type="text" class="validate">
+          </div>
+        </div>
+      </form>
+    </div>
+  </form>
+  <div class="sign_in">
+    <a href="calendar.html" onclick="getConfirmation()"><h3>Book Class</h3></a>
+  </div>
 </div>
 
 
 <div class = "navigate">
   <div class="back">
-    <a href = "home.html"><button id = "back"> Back </button></a>
+    <a href = "skip.html"><button id = "back"> Back </button></a>
   </div>
 </div>
+
+</html>
+
+<script>
+function getConfirmation() {
+  alert("Event Booked!")
+}
+</script>

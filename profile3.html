@@ -11,10 +11,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body>
 
 </body>
-
 <div class="prof">
   <a href="profile.html"><i class="far fa-user"></i></a>
 </div>
@@ -31,37 +31,65 @@
 </div>
 
 <div class="subtitle">
-  <h2>Great! We've found an activity for you. Click the button below to book!</h2>
+  <h2>Hi, John Doe!</h2>
 </div>
 
-<div class = "event">
-</div>
-<div class = "event-with-border">
-  <img class="tile_image" src="images/330.jpg"/>
-  <p>A class in which you will "try your best" to design a website to help people to try new things. April 1st 2019</p>
-  <a onclick="getConfirmation()"><button class = "book"> Book </button></a>
+<div class="settings">
+  <i class="material-icons">settings</i>
+</settings>
+
+<div class="pic">
+  <i class="material-icons">account_circle</i>
 </div>
 
+<div class="tabletitle">
+  <h2>Upcoming Booked Events:</h2>
+</div>
+
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Date of Event</th>
+    <th>Cancel?</th>
+  </tr>
+  <tr id="concert">
+    <td>Concert</td>
+    <td>03/29/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("concert")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+  <tr id = "pottery">
+    <td>Web Design</td>
+    <td>08/02/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("pottery")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+  <tr id = "skydiving">
+    <td>Fight a Bear</td>
+    <td>10/29/19</td>
+    <td><button class="cancelbutton" onclick='getConfirmation("skydiving")'><i class="material-icons">cancel</i></button></td>
+  </tr>
+</table>
 
 
 <div class = "navigate">
   <div class="back">
-    <a href = "art.html"><button id = "back"> Back </button></a>
+    <a href = "skip.html"><button id = "back"> Back </button></a>
   </div>
 </div>
 
-
 </html>
 
+
+
 <script>
-function getConfirmation() {
-  var retVal = confirm("Click CANCEL to book event WITHOUT signing in. Click OK to sign in before booking event.");
-  if( retVal == true ) {
-    location.replace("profile2.html");
-    return true;
-  } else {
-    location.replace("booknow.html");
-    return false;
+  function getConfirmation(id) {
+    var retVal = confirm("Are you sure you want to cancel your event?");
+    if( retVal == true ) {
+      alert("Event Cancelled!");
+      document.getElementById(id).remove();
+      return true;
+    } else {
+      alert("Event NOT Cancelled!");
+      return false;
+    }
   }
-}
 </script>
