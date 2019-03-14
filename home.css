@@ -118,6 +118,7 @@ button {
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-weight: 100;
+  color: black;
 }
 
 .activities button{
@@ -312,21 +313,28 @@ a.book:hover {
   text-align: center;
 }
 
+
 .event{
 
-  width: 32%;
+  width: 31%;
   font-family: 'Quicksand', sans-serif;
   color: #F7B267;
   display: inline-block;
   text-align: center;
 
 }
+.event-with-border{
 
-.single-event.event{
-  position: relative;
-  left: 100px;
+  width: 31%;
+  font-family: 'Quicksand', sans-serif;
+  color: #F7B267;
+  display: inline-block;
+  text-align: center;
+  border: 2px dashed #F7B267;
 
 }
+
+
 
 .tile_image {
     padding: 15px 5px 0px 3px;
